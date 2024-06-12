@@ -15,11 +15,12 @@ import profitImg from "../public/images/profitImg.svg"
 import taxImg from "../public/images/taxImg.svg"
 import tokenomicsImg from "../public/images/tokenomicsImg.svg"
 import info from "../public/images/info.svg"
+import TrendingCoins from "@/components/TrendingCoins";
 
 export default function Home() {
   return (
     <main className="flex h-[4399px] bg-[#EFF2F5] flex-col items-center justify-between">
-      <div className="w-[80%]">
+      <div className="w-[85%]">
         <div className="flex gap-2 font-light py-4">
           <span className="text-[#49616E]">Cryptocurrency</span>{" "}
           <Image src={leftarrow}></Image> Bitcoin
@@ -28,7 +29,7 @@ export default function Home() {
         <section className="flex w-full gap-6">
 
           {/* Left section */}
-          <div className="flex flex-col w-[65%] gap-4 h-screen">
+          <div className="flex flex-col w-[70%] gap-4 h-screen">
             
             <BitcoinMain/>
 
@@ -164,24 +165,22 @@ export default function Home() {
           </div>
 
           {/* Right section */}
-          <div className="flex flex-col gap-6 w-[35%] h-screen">
-            <div className="w-full h-[515px] flex flex-col justify-center items-center px-10 gap-6 bg-[#0052FE] rounded-2xl text-white ">
-              <h1 className=" leading-10 text-center text-2xl font-semibold">
+          <div className="flex flex-col gap-6 w-[30%] h-screen">
+            <div className="w-full h-[515px] flex flex-col justify-center items-center px-10 py-4 gap-6 bg-[#0052FE] rounded-2xl text-white ">
+              <h1 className=" leading-6 text-center text-xl mt-6 font-semibold">
                 Get Started with KoinX <br /> for FREE
               </h1>
-              <p className=" font-light text-center">
+              <p className=" font-light text-xs text-center">
                 With our range of features that you can equip for free, KoinX
                 allows you to be more educated and aware of your tax reports.
               </p>
-              <Image src={char1}></Image>
-              <button className="text-black flex bg-white rounded-md py-2 px-6 items-center gap-2">
-                Get Started for FREE <Image src={arrow}></Image>
+              <Image className="w-[60%]" src={char1}></Image>
+              <button className="text-black font-semibold mb-8 text-xs flex bg-white rounded-md py-2 px-4 items-center gap-2">
+                Get Started for FREE <Image className="w-3" src={arrow}></Image>
               </button>
             </div>
-
-            <div className="bg-white w-full h-[250px] p-10 text-center rounded-lg ">
-              Top three Bitcoins
-            </div>
+            
+            <TrendingCoins />
           </div>
         </section>
       </div>
