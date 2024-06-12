@@ -4,7 +4,7 @@ import { TABS, TEAM } from "@/utils/constant";
 import BitcoinMain from "@/components/BitcoinMain";
 
 import leftarrow from "../public/images/leftarrow.svg";
-import upArrow from "../public/images/uparrow.svg"
+import upArrow from "../public/images/upArrow.svg"
 import char1 from "../public/images/character1.svg";
 import tableInfo from "../public/images/table.svg";
 import arrow from "../public/images/arrow.svg";
@@ -12,7 +12,7 @@ import newsIcon from "../public/images/newsIcon.svg"
 import stockIcon from "../public/images/stockIcon.svg"
 import corousalBtn from "../public/images/corousalBtn.svg"
 import profitImg from "../public/images/profitImg.svg"
-import taxImg from "../public/images/taxImg.svg"
+import taxImg from "../public/images/TaxImg.svg"
 import tokenomicsImg from "../public/images/tokenomicsImg.svg"
 import info from "../public/images/info.svg"
 import TrendingCoins from "@/components/TrendingCoins";
