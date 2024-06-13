@@ -4,7 +4,7 @@ import { TABS, TEAM } from "@/utils/constant";
 import BitcoinMain from "@/components/BitcoinMain";
 
 import leftarrow from "../public/images/leftarrow.svg";
-import upArrow from "../public/images/uparrow.svg"
+import upArrow from "../public/images/upArrow.svg"
 import char1 from "../public/images/character1.svg";
 import tableInfo from "../public/images/table.svg";
 import arrow from "../public/images/arrow.svg";
@@ -12,14 +12,14 @@ import newsIcon from "../public/images/newsIcon.svg"
 import stockIcon from "../public/images/stockIcon.svg"
 import corousalBtn from "../public/images/corousalBtn.svg"
 import profitImg from "../public/images/profitImg.svg"
-import taxImg from "../public/images/taxImg.svg"
+import taxImg from "../public/images/TaxImg.svg"
 import tokenomicsImg from "../public/images/tokenomicsImg.svg"
 import info from "../public/images/info.svg"
 import TrendingCoins from "@/components/TrendingCoins";
 
 export default function Home() {
   return (
-    <main className="flex h-[4399px] bg-[#EFF2F5] flex-col items-center justify-between">
+    <main className="flex pb-16 bg-[#EFF2F5] flex-col items-center justify-between">
       <div className="w-[85%]">
         <div className="flex gap-2 font-light py-4">
           <span className="text-[#49616E]">Cryptocurrency</span>{" "}
@@ -29,7 +29,7 @@ export default function Home() {
         <section className="flex w-full gap-6">
 
           {/* Left section */}
-          <div className="flex flex-col w-[70%] gap-4 h-screen">
+          <div className="flex flex-col w-[70%] gap-4">
             
             <BitcoinMain/>
 
@@ -41,7 +41,7 @@ export default function Home() {
             </div>
 
             {/* Performance */}
-            <div className="bg-white w-full h-[700px] px-8 py-4 text-center rounded-lg ">
+            <div className="bg-white w-full px-8 py-6 text-center rounded-lg ">
               <h1 className=" py-2 mb-2 text-left text-2xl font-semibold">Performance</h1>
 
               <div className="flex justify-between items-center mb-6  gap-12">
@@ -68,7 +68,7 @@ export default function Home() {
             </div>
 
             {/* Sentiments */}
-            <div className="bg-white p-6 w-full h-[700px] rounded-lg ">
+            <div className="bg-white p-6 w-full  rounded-lg ">
               <h1 className="py-2 text-left text-2xl font-semibold">Sentiment</h1>
               <h2 className=" flex py-2 text-left text-lg text-[#44475B] font-semibold gap-2">Key Events <Image src={info}></Image> </h2>
 
