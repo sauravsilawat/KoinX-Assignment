@@ -15,33 +15,34 @@ import profitImg from "../public/images/profitImg.svg"
 import taxImg from "../public/images/TaxImg.svg"
 import tokenomicsImg from "../public/images/tokenomicsImg.svg"
 import info from "../public/images/info.svg"
+import perf from "../public/images/performance.svg"
 import TrendingCoins from "@/components/TrendingCoins";
 
 export default function Home() {
   return (
-    <main className="flex pb-16 bg-[#EFF2F5] flex-col items-center justify-between">
+    <main className="flex pb-16 bg-[#EFF2F5] flex-col items-center justify-center custom-lg:justify-between">
       <div className="w-[85%]">
         <div className="flex gap-2 font-light py-4">
           <span className="text-[#49616E]">Cryptocurrency</span>{" "}
           <Image src={leftarrow}></Image> Bitcoin
         </div>
 
-        <section className="flex w-full gap-6">
+        <section className="flex custom-lg:flex-row flex-col w-full gap-6">
 
           {/* Left section */}
-          <div className="flex flex-col w-[70%] gap-4">
+          <div className="flex flex-col w-full custom-lg:w-[70%] gap-4">
             
             <BitcoinMain/>
 
-            <div className="flex gap-6 py-4 h-[52px] border-b-[1px]">
+            <div className="flex gap-6 py-4 h-[52px] overflow-scroll no-scrollbar border-b-[1px]">
               <div className="text-[#0141CF] pb-[32px] border-b-4 border-[#0052FE]">Overview</div>
               {TABS.map((items) => (
-                <div>{items}</div>
+                <div className=" whitespace-nowrap">{items}</div>
               ))}
             </div>
 
             {/* Performance */}
-            <div className="bg-white w-full px-8 py-6 text-center rounded-lg ">
+            <div className="bg-white w-full hidden md:block px-8 py-6 text-center rounded-lg ">
               <h1 className=" py-2 mb-2 text-left text-2xl font-semibold">Performance</h1>
 
               <div className="flex justify-between items-center mb-6  gap-12">
@@ -63,8 +64,11 @@ export default function Home() {
               </div>
 
               <h2 className=" flex py-2 mt-8 text-left text-lg text-[#44475B] font-semibold gap-2">Fundamentals <Image src={info}></Image> </h2>
-              <Image src={tableInfo}></Image>
+              <Image src={tableInfo} className="w-full"></Image>
 
+            </div>
+            <div className="bg-white w-full flex justify-center items-center md:hidden px-8 py-6 text-center rounded-lg ">
+              <Image src={perf} className="w-full"></Image>
             </div>
 
             {/* Sentiments */}
@@ -72,19 +76,19 @@ export default function Home() {
               <h1 className="py-2 text-left text-2xl font-semibold">Sentiment</h1>
               <h2 className=" flex py-2 text-left text-lg text-[#44475B] font-semibold gap-2">Key Events <Image src={info}></Image> </h2>
 
-              <div className="relative flex flex-shrink-0 overscroll-hidden gap-4">
-                <figure className="flex gap-4 w-[640px] h-[210px] items-start p-6 rounded-2xl bg-[#E8F4FD]">
+              <div className="relative flex flex-shrink-0 overflow-hidden gap-4">
+                <figure className="flex gap-4 min-w-[440px] items-start p-6 rounded-2xl bg-[#E8F4FD]">
                   <Image src={newsIcon}></Image>
                   <div>
-                    <p className="mb-2 text-left font-medium text-sm">Lorem ipsum dolor sit amet consectetur. Dui vel quis dignissim mattis enim tincidunt.</p>
-                    <p className="text-left font-light text-sm">Lorem ipsum dolor sit amet consectetur. Ac phasellus risus est faucibus metus quis. Amet sapien quam viverra adipiscing condimentum. Ac consectetur et pretium in a bibendum in. Sed vitae sit nisi viverra natoque lacinia libero enim.</p>
+                    <p className="mb-2 text-left font-medium text-xs md:text-sm">Lorem ipsum dolor sit amet consectetur. Dui vel quis dignissim mattis enim tincidunt.</p>
+                    <p className="text-left font-light text-xs md:text-sm">Lorem ipsum dolor sit amet consectetur. Ac phasellus risus est faucibus metus quis. Amet sapien quam viverra adipiscing condimentum. Ac consectetur et pretium in a bibendum in. Sed vitae sit nisi viverra natoque lacinia libero enim.</p>
                   </div>
                 </figure>
-                <figure className="flex gap-4 items-start w-[640px] h-[210px] p-6 rounded-2xl bg-[#EBF9F4]">
+                <figure className="flex gap-4 items-start min-w-[440px] p-6 rounded-2xl bg-[#EBF9F4]">
                   <Image src={stockIcon}></Image>
                   <div>
-                    <p className="mb-2 text-left font-medium text-sm">Lorem ipsum dolor sit amet consectetur. Dui vel quis dignissim mattis enim tincidunt.</p>
-                    <p className="text-left font-light text-sm">Lorem ipsum dolor sit amet consectetur. Ac phasellus risus est faucibus metus quis. Amet sapien quam viverra adipiscing condimentum. Ac consectetur et pretium in a bibendum in. Sed vitae sit nisi viverra natoque lacinia libero enim.</p>
+                    <p className="mb-2 text-left font-medium text-xs md:text-sm">Lorem ipsum dolor sit amet consectetur. Dui vel quis dignissim mattis enim tincidunt.</p>
+                    <p className="text-left font-lighttext-xs md:text-sm">Lorem ipsum dolor sit amet consectetur. Ac phasellus risus est faucibus metus quis. Amet sapien quam viverra adipiscing condimentum. Ac consectetur et pretium in a bibendum in. Sed vitae sit nisi viverra natoque lacinia libero enim.</p>
                   </div>
                 </figure>
                 <Image src={corousalBtn} className="absolute mt-16 right-0"></Image>
@@ -122,23 +126,23 @@ export default function Home() {
               </>
               <div className="h-[1px] my-4 bg-[#DFE2EB]"></div>
               <h1 className="py-2 text-left text-2xl font-semibold">Already Holding Bitcoin?</h1>
-              <div className="flex mt-4 mb-10 gap-8">
-                <figure className="flex bg-gradient-to-r from-[#79F1A4] to-[#0E5CAD] w-[50%] p-4 rounded-xl">
+              <div className="flex flex-col custom-md:flex-row mt-4 mb-10 gap-8">
+                <figure className="flex bg-gradient-to-r from-[#79F1A4] to-[#0E5CAD] w-full justify-between items-center  custom-md:w-[50%] p-4 rounded-xl">
                   <Image src={profitImg} ></Image>
                   <div className="flex flex-col gap-6 px-10">
-                    <h2 className="text-left text-lg font-bold text-[white]">Calculate your Profits</h2>
-                    <button className="flex gap-4 bg-white rounded-lg p-2 w-[150px] font-bold items-center">Check Now <Image src={arrow}></Image></button>
+                    <h2 className="text-left text-base custom-lg:text-lg font-bold text-[white]">Calculate your Profits</h2>
+                    <button className="flex gap-4 bg-white rounded-lg p-2 custom-lg:w-[150px] custom-lg:text-base text-xs font-bold items-center">Check Now <Image src={arrow}></Image></button>
                   </div>
                 </figure>
-                <figure className="flex bg-gradient-to-r from-[#FF9865] to-[#EF3031] w-[50%] p-4 rounded-xl">
+                <figure className="flex bg-gradient-to-r from-[#FF9865] to-[#EF3031] w-full justify-between items-center  custom-md:w-[50%] p-4 rounded-xl">
                   <Image src={taxImg} ></Image>
                   <div className="flex flex-col gap-6 px-10">
-                    <h2 className="text-left text-lg font-bold text-[white]">Calculate your tax liability</h2>
-                    <button className="flex gap-4 bg-white rounded-lg p-2 w-[150px] font-bold items-center">Check Now <Image src={arrow}></Image></button>
+                    <h2 className="text-left text-base custom-lg:text-lg font-bold text-[white]">Calculate your tax liability</h2>
+                    <button className="flex gap-4 bg-white rounded-lg p-2 custom-lg:w-[150px] custom-lg:text-base text-xs font-bold items-center">Check Now <Image src={arrow}></Image></button>
                   </div>
                 </figure>
               </div>
-              <p className="my-6 text-left font-medium text-base text-[#3E424A]">Fermentum hendrerit imperdiet nulla viverra faucibus. Sit aliquam massa vel convallis duis ac. Mi adipiscing semper scelerisque porttitor pulvinar nunc risus. Fermentum potenti iaculis lacinia congue ipsum fames amet dui. Purus ultrices tincidunt volutpat in eget. Ullamcorper dui</p>
+              <p className="my-6 text-left hidden custom-md:block font-medium text-base text-[#3E424A]">Fermentum hendrerit imperdiet nulla viverra faucibus. Sit aliquam massa vel convallis duis ac. Mi adipiscing semper scelerisque porttitor pulvinar nunc risus. Fermentum potenti iaculis lacinia congue ipsum fames amet dui. Purus ultrices tincidunt volutpat in eget. Ullamcorper dui</p>
             </div>
 
             {/* Tokenomics */}
@@ -152,7 +156,7 @@ export default function Home() {
               <h1 className="py-2 text-left text-2xl font-semibold">Team</h1>
               <p className="text-left font-medium py-4 mb-8 text-base text-[#3E424A] ">Lorem ipsum dolor sit amet consectetur. Id consequat adipiscing arcu nibh. Eget mattis in mi integer sit egestas. Proin tempor id pretium quam. Facilisis purus convallis quam augue.</p>
               {TEAM.map((data)=>(
-                <div className="bg-[#E8F4FD] flex gap-6 items-center rounded-md py-2 px-4 my-4">
+                <div className="bg-[#E8F4FD] flex flex-col md:flex-row gap-6 items-center rounded-md py-10 md:py-2 px-4 my-4">
                   <div className="flex flex-col w-[500px] justify-center items-center">
                     <Image src={data.img} width={90} ></Image>
                     <h2 className=" font-semibold text-base mt-4">{data.name}</h2>
@@ -165,8 +169,8 @@ export default function Home() {
           </div>
 
           {/* Right section */}
-          <div className="flex flex-col gap-6 w-[30%] h-screen">
-            <div className="w-full h-[515px] flex flex-col justify-center items-center px-10 py-4 gap-6 bg-[#0052FE] rounded-2xl text-white ">
+          <div className="flex flex-col gap-6 custom-lg:w-[30%] h-screen">
+            <div className="w-full flex flex-col justify-center items-center px-10 py-4 gap-6 bg-[#0052FE] rounded-2xl text-white ">
               <h1 className=" leading-6 text-center text-xl mt-6 font-semibold">
                 Get Started with KoinX <br /> for FREE
               </h1>
@@ -174,7 +178,7 @@ export default function Home() {
                 With our range of features that you can equip for free, KoinX
                 allows you to be more educated and aware of your tax reports.
               </p>
-              <Image className="w-[60%]" src={char1}></Image>
+              <Image className="w-[35%] custom-lg:w-[60%]" src={char1}></Image>
               <button className="text-black font-semibold mb-8 text-xs flex bg-white rounded-md py-2 px-4 items-center gap-2">
                 Get Started for FREE <Image className="w-3" src={arrow}></Image>
               </button>
