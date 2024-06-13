@@ -1,4 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Live Site Link: 
+[https://main--saurav-koinx.netlify.app/](https://main--saurav-koinx.netlify.app/)
+
+## Screen:
+
+![2024-06-13](https://github.com/sauravsilawat/KoinX-Assignment/assets/96677760/325c9c9f-3dbc-4a15-a0f2-228df857c6f0)
+
 
 ## Getting Started
 
